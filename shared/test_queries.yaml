@@ -1,0 +1,80 @@
+test_queries:
+  # Perfect matches - should score very high
+  perfect_matches:
+    - query: "My credit card was declined"
+      expected_category: "billing"
+      expected_topic: "payment_failed"
+    
+    - query: "I forgot my password"
+      expected_category: "technical_support"
+      expected_topic: "password_reset"
+    
+    - query: "Where is my package"
+      expected_category: "shipping"
+      expected_topic: "track_order"
+  
+  # Close variations - should still match correctly
+  close_variations:
+    - query: "I can't login"
+      expected_category: "technical_support"
+      expected_topic: "password_reset"
+    
+    - query: "I can't remember my password"
+      expected_category: "technical_support"
+      expected_topic: "password_reset"
+    
+    - query: "my payment didn't work"
+      expected_category: "billing"
+      expected_topic: "payment_failed"
+    
+    - query: "when will my order get here"
+      expected_category: "shipping"
+      expected_topic: "track_order"
+    
+    - query: "need to change my address for delivery"
+      expected_category: "shipping"
+      expected_topic: "change_address"
+  
+  # Ambiguous queries - interesting edge cases
+  ambiguous:
+    - query: "I have a problem with my account"
+      expected_category: "account_management"
+      expected_topic: "security_concern"
+      alternative_category: "technical_support"
+      alternative_topic: "password_reset"
+    
+    - query: "something is wrong"
+      expected_category: "technical_support"
+      expected_topic: "app_crash"
+      note: "Very vague - could match many things"
+    
+    - query: "help me"
+      expected_category: "technical_support"
+      expected_topic: "installation_help"
+      note: "Extremely vague"
+  
+  # Complex queries with multiple intents
+  complex:
+    - query: "My card was declined and I can't login to check my account"
+      expected_category: "billing"
+      expected_topic: "payment_failed"
+      secondary_category: "technical_support"
+      secondary_topic: "password_reset"
+    
+    - query: "I want a refund because my package never arrived"
+      expected_category: "billing"
+      expected_topic: "refund_request"
+      secondary_category: "shipping"
+      secondary_topic: "delivery_problem"
+  
+  # Out of domain - should have low confidence
+  out_of_domain:
+    - query: "What's the weather today?"
+      expected_category: null
+      expected_topic: null
+      note: "Completely unrelated to training data"
+    
+    - query: "How do I cook pasta?"
+      expected_category: null
+      expected_topic: null
+      note: "Outside domain knowledge"

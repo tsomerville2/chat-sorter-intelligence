@@ -1,0 +1,43 @@
+PROGRAM MainController
+BEGIN
+    DECLARE dataPath AS STRING
+    DECLARE classifier AS QueryClassifier
+    DECLARE userQuery AS STRING
+    DECLARE result AS MatchResult
+    
+    FUNCTION Initialize()
+    BEGIN
+        dataPath = "data/training_data.yaml"
+        classifier = NEW QueryClassifier()
+        RETURN TRUE
+    END
+    
+    FUNCTION ProcessQuery(query)
+    BEGIN
+        IF classifier IS NULL THEN
+            RETURN ERROR "Classifier not initialized"
+        END IF
+        
+        result = classifier.Predict(query)
+        RETURN result
+    END
+    
+    // Main execution
+    Initialize()
+    classifier.LoadData(dataPath)
+    classifier.Train()
+    
+    LOOP FOREVER
+        PRINT "Enter query (or 'quit' to exit): "
+        userQuery = READ_INPUT()
+        
+        IF userQuery EQUALS "quit" THEN
+            BREAK
+        END IF
+        
+        result = ProcessQuery(userQuery)
+        PRINT "Category: " + result.category
+        PRINT "Topic: " + result.topic
+        PRINT "Confidence: " + result.confidence
+    END LOOP
+END

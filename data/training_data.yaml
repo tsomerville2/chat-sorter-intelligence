@@ -1,0 +1,216 @@
+categories:
+  billing:
+    topics:
+      payment_failed:
+        examples:
+          - "My credit card was declined"
+          - "Payment didn't go through"
+          - "Transaction failed on my account"
+          - "Card got rejected when I tried to pay"
+          - "The payment bounced back"
+          - "My payment was unsuccessful."
+          - "The system is not accepting my card."
+          - "I'm getting a payment error message."
+          - "There's an issue with my payment method."
+          - "My bank is blocking the transaction."
+      
+      refund_request:
+        examples:
+          - "I want my money back"
+          - "Can I get a refund"
+          - "Need to return this and get refunded"
+          - "Please process a refund for my order"
+          - "I'd like to request a refund"
+          - "I'm not satisfied, I want a refund."
+          - "This isn't what I expected, can I have my money back?"
+          - "The product is defective, I need a full refund."
+          - "Please reverse the charges on my card."
+          - "I'd like to initiate a return for a refund."
+      
+      invoice_question:
+        examples:
+          - "Can you explain this charge"
+          - "What is this line item on my bill"
+          - "I don't understand my invoice"
+          - "Why was I charged this amount"
+          - "Need clarification on my bill"
+          - "Could you break down the charges on my invoice?"
+          - "I have a question about a fee on my bill."
+          - "This charge doesn't look right, can you verify it?"
+          - "Why is my bill higher than usual?"
+          - "I need an itemized copy of my invoice."
+      
+      subscription_cancel:
+        examples:
+          - "I want to cancel my subscription"
+          - "Please stop my monthly charges"
+          - "How do I unsubscribe"
+          - "End my membership"
+          - "I need to cancel my plan"
+          - "I no longer need this service, please cancel it."
+          - "Turn off auto-renewal for my subscription."
+          - "I wish to terminate my contract."
+          - "Please ensure I am not billed again."
+          - "Downgrade me to the free plan."
+
+  technical_support:
+    topics:
+      password_reset:
+        examples:
+          - "I forgot my password"
+          - "Can't log into my account"
+          - "Need to reset my password"
+          - "Locked out of my account"
+          - "Password isn't working"
+          - "I'm unable to access my account, I think it's a password issue."
+          - "Send me a password reset link."
+          - "My login credentials are not being recognized."
+          - "I need assistance with recovering my account."
+          - "The 'forgot password' feature is not working."
+      
+      connection_issues:
+        examples:
+          - "Internet keeps disconnecting"
+          - "Can't connect to the service"
+          - "Connection drops frequently"
+          - "Having network problems"
+          - "Service is intermittent"
+          - "My wifi is fine, but your service is down."
+          - "I'm experiencing latency and high ping."
+          - "The server is not responding."
+          - "I keep getting a 'cannot connect' error."
+          - "Is there a known outage in my area?"
+      
+      app_crash:
+        examples:
+          - "The app keeps crashing"
+          - "Application won't open"
+          - "Software closes unexpectedly"
+          - "Program freezes and shuts down"
+          - "App stops working randomly"
+          - "The application closes itself after a few seconds."
+          - "I get an error report every time I open the program."
+          - "The software has become unstable and crashes."
+          - "The app is unresponsive and I have to force quit."
+          - "It worked fine yesterday, but now it crashes on launch."
+      
+      installation_help:
+        examples:
+          - "How do I install this"
+          - "Setup isn't working"
+          - "Installation failed"
+          - "Can't get it installed"
+          - "Need help with setup"
+          - "I'm stuck on the installation screen."
+          - "The installer is giving me an error code."
+          - "I don't have the right permissions to install."
+          - "The setup guide is confusing, I need help."
+          - "Is my system compatible with this software?"
+
+  shipping:
+    topics:
+      track_order:
+        examples:
+          - "Where is my package"
+          - "Track my shipment"
+          - "When will my order arrive"
+          - "Check delivery status"
+          - "Find my tracking number"
+          - "Can I get an ETA for my delivery?"
+          - "I need the tracking information for my purchase."
+          - "Has my order been dispatched yet?"
+          - "Provide me with the current location of my package."
+          - "I can't find the tracking link you sent me."
+      
+      delivery_problem:
+        examples:
+          - "Package never arrived"
+          - "Delivery to wrong address"
+          - "Item was damaged in shipping"
+          - "Box was left in the rain"
+          - "Shipment got lost"
+          - "The tracking says delivered, but I don't have it."
+          - "My package was left in an unsafe location."
+          - "The contents of the box are broken."
+          - "I received the wrong item in my shipment."
+          - "The delivery driver never showed up."
+      
+      expedite_shipping:
+        examples:
+          - "Can you rush my order"
+          - "Need faster shipping"
+          - "Upgrade to express delivery"
+          - "Make it priority mail"
+          - "Ship it overnight please"
+          - "Is it possible to get this delivered sooner?"
+          - "I need this by tomorrow, can I pay for faster shipping?"
+          - "What are my options for express delivery?"
+          - "Can you prioritize my order fulfillment?"
+          - "How much for next-day air?"
+      
+      change_address:
+        examples:
+          - "Need to update shipping address"
+          - "Send to different location"
+          - "Wrong address on order"
+          - "Change delivery destination"
+          - "Update where to ship"
+          - "I made a mistake in my shipping address."
+          - "Can you reroute my package to a different address?"
+          - "I need to change the delivery from my home to my office."
+          - "Is it too late to modify the shipping destination?"
+          - "Please hold the package, I need to update the address."
+
+  account_management:
+    topics:
+      update_information:
+        examples:
+          - "Change my email address"
+          - "Update my phone number"
+          - "Edit profile information"
+          - "Correct my name spelling"
+          - "Modify account details"
+          - "I need to change the primary email on my account."
+          - "My billing address has changed."
+          - "How can I update my security questions?"
+          - "I want to add a secondary contact to my account."
+          - "Please update my communication preferences."
+      
+      close_account:
+        examples:
+          - "Delete my account"
+          - "Want to close my account"
+          - "Remove my profile"
+          - "Permanently delete everything"
+          - "Close my account forever"
+          - "I want to exercise my right to be forgotten."
+          - "Please erase all of my data from your systems."
+          - "I'm closing my account due to privacy concerns."
+          - "Take me off all your mailing lists and close my account."
+          - "I will no longer be using your service, please terminate my account."
+      
+      merge_accounts:
+        examples:
+          - "I have two accounts"
+          - "Combine my profiles"
+          - "Merge duplicate accounts"
+          - "Link my accounts together"
+          - "Consolidate multiple accounts"
+          - "I accidentally created two accounts, can you merge them?"
+          - "I want to consolidate all my purchases under one profile."
+          - "Can you transfer my history from my old account to my new one?"
+          - "I have a personal and a work account, I want to combine them."
+          - "Please link my various logins into a single account."
+      
+      security_concern:
+        examples:
+          - "I think someone hacked my account"
+          - "Suspicious activity on my profile"
+          - "Unauthorized access detected"
+          - "Someone else is using my account"
+          - "Security breach on my account"
+          - "I received a login alert from a location I don't recognize."
+          - "My account information was changed without my permission."
+          - "I'm worried my personal data has been compromised."
+          - "Can you check the login history for my account?"
+          - "I need to report a potential security vulnerability."

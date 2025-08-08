@@ -1,0 +1,52 @@
+PROGRAM DataManager
+BEGIN
+    DECLARE categories AS DICTIONARY
+    DECLARE trainingExamples AS LIST
+    DECLARE trainingLabels AS LIST
+    
+    FUNCTION LoadYAML(filepath)
+    BEGIN
+        DECLARE fileContent AS STRING
+        DECLARE yamlData AS DICTIONARY
+        
+        fileContent = READ_FILE(filepath)
+        yamlData = PARSE_YAML(fileContent)
+        
+        categories = yamlData["categories"]
+        RETURN TRUE
+    END
+    
+    FUNCTION PrepareTrainingData()
+    BEGIN
+        DECLARE categoryName AS STRING
+        DECLARE topicName AS STRING
+        DECLARE example AS STRING
+        DECLARE label AS STRING
+        
+        CLEAR trainingExamples
+        CLEAR trainingLabels
+        
+        FOR EACH categoryName IN categories
+            FOR EACH topicName IN categories[categoryName]["topics"]
+                label = categoryName + ":" + topicName
+                
+                FOR EACH example IN categories[categoryName]["topics"][topicName]["examples"]
+                    ADD example TO trainingExamples
+                    ADD label TO trainingLabels
+                END FOR
+            END FOR
+        END FOR
+        
+        RETURN TRUE
+    END
+    
+    FUNCTION GetTrainingData()
+    BEGIN
+        RETURN trainingExamples, trainingLabels
+    END
+    
+    FUNCTION GetCategories()
+    BEGIN
+        RETURN categories
+    END
+END

@@ -1,0 +1,15 @@
+Test Results on 100 Samples
+==================================================
+
+play2.B (Char N-grams): 49.0% accuracy
+play1.B (Naive Bayes): 48.0% accuracy
+play1.B (SVM): 47.0% accuracy
+play2.C (Simple Embeddings): 47.0% accuracy
+play1.B (Neural Net): 45.0% accuracy
+play2.B (Jaccard): 44.0% accuracy
+play2.B (Weighted Cosine): 43.0% accuracy
+play2.A (No Stop Words): 42.0% accuracy
+play2.py (Original Cosine): 41.0% accuracy
+play1.py (Original ML): 40.0% accuracy
+play1.B (Random Forest): 27.0% accuracy
+play1.A.py: 0.0% accuracy

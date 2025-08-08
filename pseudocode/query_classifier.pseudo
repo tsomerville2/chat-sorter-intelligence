@@ -1,0 +1,66 @@
+PROGRAM QueryClassifier
+BEGIN
+    DECLARE dataManager AS DataManager
+    DECLARE mlClassifier AS MLClassifier
+    DECLARE isReady AS BOOLEAN
+    
+    FUNCTION Initialize()
+    BEGIN
+        dataManager = NEW DataManager()
+        mlClassifier = NEW MLClassifier()
+        mlClassifier.Initialize()
+        isReady = FALSE
+        RETURN TRUE
+    END
+    
+    FUNCTION LoadData(filepath)
+    BEGIN
+        DECLARE success AS BOOLEAN
+        
+        success = dataManager.LoadYAML(filepath)
+        IF success IS FALSE THEN
+            RETURN ERROR "Failed to load data"
+        END IF
+        
+        dataManager.PrepareTrainingData()
+        RETURN TRUE
+    END
+    
+    FUNCTION Train()
+    BEGIN
+        DECLARE examples AS LIST
+        DECLARE labels AS LIST
+        
+        examples, labels = dataManager.GetTrainingData()
+        
+        IF LENGTH(examples) < 10 THEN
+            RETURN ERROR "Not enough training data"
+        END IF
+        
+        mlClassifier.TrainModel(examples, labels)
+        isReady = TRUE
+        RETURN TRUE
+    END
+    
+    FUNCTION Predict(query)
+    BEGIN
+        DECLARE label AS STRING
+        DECLARE confidence AS FLOAT
+        DECLARE category AS STRING
+        DECLARE topic AS STRING
+        DECLARE result AS STRUCTURE
+        
+        IF isReady IS FALSE THEN
+            RETURN ERROR "Classifier not ready"
+        END IF
+        
+        label, confidence = mlClassifier.PredictQuery(query)
+        category, topic = mlClassifier.SplitLabel(label)
+        
+        result.category = category
+        result.topic = topic
+        result.confidence = confidence
+        
+        RETURN result
+    END
+END

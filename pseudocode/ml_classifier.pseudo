@@ -1,0 +1,58 @@
+PROGRAM MLClassifier
+BEGIN
+    DECLARE vectorizer AS TFIDFVectorizer
+    DECLARE model AS MultinomialNaiveBayes
+    DECLARE trainingVectors AS MATRIX
+    DECLARE isT rained AS BOOLEAN
+    
+    FUNCTION Initialize()
+    BEGIN
+        vectorizer = NEW TFIDFVectorizer()
+        model = NEW MultinomialNaiveBayes()
+        isTrained = FALSE
+        RETURN TRUE
+    END
+    
+    FUNCTION TrainModel(examples, labels)
+    BEGIN
+        DECLARE vectors AS MATRIX
+        
+        // Convert text to numerical vectors
+        vectors = vectorizer.FitTransform(examples)
+        
+        // Train the classifier
+        model.Fit(vectors, labels)
+        
+        isTrained = TRUE
+        RETURN TRUE
+    END
+    
+    FUNCTION PredictQuery(query)
+    BEGIN
+        DECLARE queryVector AS VECTOR
+        DECLARE prediction AS STRING
+        DECLARE probabilities AS ARRAY
+        DECLARE confidence AS FLOAT
+        
+        IF isTrained IS FALSE THEN
+            RETURN ERROR "Model not trained"
+        END IF
+        
+        // Transform query to vector
+        queryVector = vectorizer.Transform(query)
+        
+        // Get prediction and confidence
+        prediction = model.Predict(queryVector)
+        probabilities = model.PredictProbability(queryVector)
+        confidence = MAX(probabilities)
+        
+        RETURN prediction, confidence
+    END
+    
+    FUNCTION SplitLabel(label)
+    BEGIN
+        DECLARE parts AS ARRAY
+        parts = SPLIT(label, ":")
+        RETURN parts[0], parts[1]  // category, topic
+    END
+END

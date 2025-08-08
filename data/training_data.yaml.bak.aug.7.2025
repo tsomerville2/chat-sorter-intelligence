@@ -1,0 +1,136 @@
+categories:
+  billing:
+    topics:
+      payment_failed:
+        examples:
+          - "My credit card was declined"
+          - "Payment didn't go through"
+          - "Transaction failed on my account"
+          - "Card got rejected when I tried to pay"
+          - "The payment bounced back"
+      
+      refund_request:
+        examples:
+          - "I want my money back"
+          - "Can I get a refund"
+          - "Need to return this and get refunded"
+          - "Please process a refund for my order"
+          - "I'd like to request a refund"
+      
+      invoice_question:
+        examples:
+          - "Can you explain this charge"
+          - "What is this line item on my bill"
+          - "I don't understand my invoice"
+          - "Why was I charged this amount"
+          - "Need clarification on my bill"
+      
+      subscription_cancel:
+        examples:
+          - "I want to cancel my subscription"
+          - "Please stop my monthly charges"
+          - "How do I unsubscribe"
+          - "End my membership"
+          - "I need to cancel my plan"
+
+  technical_support:
+    topics:
+      password_reset:
+        examples:
+          - "I forgot my password"
+          - "Can't log into my account"
+          - "Need to reset my password"
+          - "Locked out of my account"
+          - "Password isn't working"
+      
+      connection_issues:
+        examples:
+          - "Internet keeps disconnecting"
+          - "Can't connect to the service"
+          - "Connection drops frequently"
+          - "Having network problems"
+          - "Service is intermittent"
+      
+      app_crash:
+        examples:
+          - "The app keeps crashing"
+          - "Application won't open"
+          - "Software closes unexpectedly"
+          - "Program freezes and shuts down"
+          - "App stops working randomly"
+      
+      installation_help:
+        examples:
+          - "How do I install this"
+          - "Setup isn't working"
+          - "Installation failed"
+          - "Can't get it installed"
+          - "Need help with setup"
+
+  shipping:
+    topics:
+      track_order:
+        examples:
+          - "Where is my package"
+          - "Track my shipment"
+          - "When will my order arrive"
+          - "Check delivery status"
+          - "Find my tracking number"
+      
+      delivery_problem:
+        examples:
+          - "Package never arrived"
+          - "Delivery to wrong address"
+          - "Item was damaged in shipping"
+          - "Box was left in the rain"
+          - "Shipment got lost"
+      
+      expedite_shipping:
+        examples:
+          - "Can you rush my order"
+          - "Need faster shipping"
+          - "Upgrade to express delivery"
+          - "Make it priority mail"
+          - "Ship it overnight please"
+      
+      change_address:
+        examples:
+          - "Need to update shipping address"
+          - "Send to different location"
+          - "Wrong address on order"
+          - "Change delivery destination"
+          - "Update where to ship"
+
+  account_management:
+    topics:
+      update_information:
+        examples:
+          - "Change my email address"
+          - "Update my phone number"
+          - "Edit profile information"
+          - "Correct my name spelling"
+          - "Modify account details"
+      
+      close_account:
+        examples:
+          - "Delete my account"
+          - "Want to close my account"
+          - "Remove my profile"
+          - "Permanently delete everything"
+          - "Close my account forever"
+      
+      merge_accounts:
+        examples:
+          - "I have two accounts"
+          - "Combine my profiles"
+          - "Merge duplicate accounts"
+          - "Link my accounts together"
+          - "Consolidate multiple accounts"
+      
+      security_concern:
+        examples:
+          - "I think someone hacked my account"
+          - "Suspicious activity on my profile"
+          - "Unauthorized access detected"
+          - "Someone else is using my account"
+          - "Security breach on my account"
