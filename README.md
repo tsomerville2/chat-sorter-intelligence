@@ -5,10 +5,10 @@ ML-based customer query classification system that matches natural language quer
 ## Quick Start
 
 ```bash
-python play.py
+python menu.py
 ```
 
-That's it! The interactive menu will start automatically.
+That's it! Select option 1 (Quick Start) and the system will initialize automatically.
 
 ## What This Does
 

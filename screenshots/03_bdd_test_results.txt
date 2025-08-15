@@ -1,0 +1,10 @@
+USING RUNNER: behave.runner:Runner
+Query Matching    # features/query_matching.feature
+  Match billing query  ......
+  Match technical support query  ......
+  Match shipping query  ......
+
+1 feature passed, 0 failed, 0 skipped
+3 scenarios passed, 0 failed, 0 skipped
+18 steps passed, 0 failed, 0 skipped
+Took 0min 3.441s
