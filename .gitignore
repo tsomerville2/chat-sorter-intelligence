@@ -1,22 +1,10 @@
-# Virtual Environment
-venv/
+# --- Patterns managed by gitstarter ---
+# Essential ignores for Python/Node projects
 __pycache__/
-*.py[cod]
-*$py.class
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment variables
+*.pyc
 .env
-.env.local
-
-# Logs
-*.log
+venv/
+env/
+.venv/
+node_modules/
+.DS_Store
